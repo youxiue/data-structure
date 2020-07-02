@@ -1,4 +1,4 @@
-package webservice.publish;
+package com.youxiue.other.webservice.publish;
 
 import org.apache.cxf.binding.soap.SoapMessage;
 import org.apache.cxf.headers.Header;

@@ -1,8 +1,7 @@
-package gamePlug;
+package com.youxiue.other.gamePlug;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class RobotTest2 {

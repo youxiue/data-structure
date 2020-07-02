@@ -1,6 +1,4 @@
-package linkedList;
-
-import com.sun.xml.internal.ws.wsdl.writer.document.soap.Body;
+package com.youxiue.linkedList;
 
 /**
  * 环形链表
@@ -8,8 +6,8 @@ import com.sun.xml.internal.ws.wsdl.writer.document.soap.Body;
 public class JosephuLinkedListDemo {
     public static void main(String[] args) {
         CircleSingleLinkedList linkedList = new CircleSingleLinkedList();
-//        linkedList.add(1);
-//        linkedList.list();
+//        com.youxiue.linkedList.add(1);
+//        com.youxiue.linkedList.list();
         linkedList.cq(1,10,3);
     }
 }

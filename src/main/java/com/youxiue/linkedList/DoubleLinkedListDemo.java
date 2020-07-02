@@ -1,4 +1,4 @@
-package linkedList;
+package com.youxiue.linkedList;
 
 /**
  * 双向链表
@@ -187,7 +187,7 @@ class HeroNode2 {
 
     @Override
     public String toString() {
-        return "linkedList.HeroNode2{" +
+        return "com.youxiue.linkedList.HeroNode2{" +
                 "no=" + no +
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +

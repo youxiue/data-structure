@@ -1,4 +1,4 @@
-package sort;
+package com.youxiue.sort;
 
 import org.junit.Test;
 
@@ -15,12 +15,12 @@ public class Bubbling {
     @Test
     public void test() {
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 80000; i++) {
-            list.add((int) (Math.random() * 8000000)); //生成 [0 8000000)的数
+        for (int i = 0; i < 20; i++) {
+            list.add((int) (Math.random() * 100)); //生成 [0 8000000)的数
         }
         SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.printf("开始时间:%s \n", simple.format(new Date()));
-        bubblingSort(list);
+        bubblingSort2(list);
         System.out.printf("结束时间:%s \n", simple.format(new Date()));
         //
 
@@ -47,8 +47,8 @@ public class Bubbling {
                     flag = true;
                 }
             }
-           /* System.out.printf("第%d趟排序:",i);
-            System.out.println(list.toString());*/
+            System.out.printf("第%d趟排序:",i);
+            System.out.println(list.toString());
             // 优化 如果没有发生交换 ,说明顺序已经是 从小到大的顺序了
             if (!flag) {
                 // 说明一次交换都没有  则 结束循环
@@ -72,6 +72,8 @@ public class Bubbling {
                     list.set(j, temp);
                 }
             }
+            System.out.printf("第%d趟排序:",i);
+            System.out.println(list.toString());
         }
     }
 

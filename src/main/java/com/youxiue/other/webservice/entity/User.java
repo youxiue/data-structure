@@ -1,6 +1,4 @@
-package webservice.entity;
-
-import java.awt.event.InputEvent;
+package com.youxiue.other.webservice.entity;
 
 public class User {
     private Integer id;

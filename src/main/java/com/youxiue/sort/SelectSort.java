@@ -1,4 +1,4 @@
-package sort;
+package com.youxiue.sort;
 
 import org.junit.Test;
 

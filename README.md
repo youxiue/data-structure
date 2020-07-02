@@ -32,7 +32,7 @@
 
     
 ##列表
-- linkedList: 链表
-- stack: 栈
-- recursion: 递归
+- com.youxiue.linkedList: 链表
+- com.youxiue.stack: 栈
+- com.youxiue.recursion: 递归
 

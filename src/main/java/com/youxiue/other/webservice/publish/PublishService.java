@@ -1,4 +1,4 @@
-package webservice.publish;
+package com.youxiue.other.webservice.publish;
 
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;

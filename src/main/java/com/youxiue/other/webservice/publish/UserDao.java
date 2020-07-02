@@ -1,6 +1,6 @@
-package webservice.publish;
+package com.youxiue.other.webservice.publish;
 
-import webservice.entity.User;
+import com.youxiue.other.webservice.entity.User;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

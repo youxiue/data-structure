@@ -1,4 +1,4 @@
-package stack;
+package com.youxiue.stack;
 
 import java.util.Scanner;
 
@@ -92,7 +92,7 @@ class ArrayStack {
         }
         //从栈顶开始遍历
         for (int i = top; i >= 0; i--) {
-            System.out.printf("stack[%d]=%d\n",i,stack[i]);
+            System.out.printf("com.youxiue.stack[%d]=%d\n",i,stack[i]);
         }
     }
 

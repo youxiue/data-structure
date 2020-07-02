@@ -1,4 +1,4 @@
-package sort;
+package com.youxiue.sort;
 
 import org.junit.Test;
 
@@ -30,7 +30,7 @@ public class InsertSort {
     /**
      * 排序思想:
      * 分为两个数组, 前面为有序数组, 后面为无序数组
-     * 后面的无序数组每次去第一个值,与有序数组进行比较, 然后插入到合适的位置
+     * 后面的无序数组每次取第一个值,与有序数组进行比较, 然后插入到合适的位置
      * @param list
      */
     public void insertSort(List<Integer> list){

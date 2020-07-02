@@ -1,4 +1,4 @@
-package stack;
+package com.youxiue.stack;
 
 import java.util.ArrayList;
 import java.util.Arrays;

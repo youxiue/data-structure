@@ -1,4 +1,4 @@
-package recursion;
+package com.youxiue.recursion;
 
 import org.junit.Test;
 
