@@ -30,9 +30,25 @@
     - k次方阶O(n^k)
     - 指数阶O(2^n)
 
+4. 稳定性
+
+    能保证排序前2个相等的数其在序列的前后位置顺序和排序后它们两个的前后位置顺序相同,则是稳定的.
+
+    相反,如果值相同的前后顺序发生了变化, 则是不稳定的.
     
 ##列表
 - com.youxiue.linkedList: 链表
+    - DoubleLinkedList: 双向链表
+    - JosephuLinkedList: 环形链表
 - com.youxiue.stack: 栈
+    - ArrayStackDemo: 手动实现栈
+    - Calculator: 计算中缀表达式
+    - PolandNotation: 逆波兰计算器(计算后缀表达式)
 - com.youxiue.recursion: 递归
+    - MiGong: 迷宫寻路问题
+    - Queue8: 8皇后问题
+- com.youxiue.sort:排序
+    - Bubbling: 冒泡排序
+    - InsertSort: 插入排序
+    - SelectSort: 选择排序
 
