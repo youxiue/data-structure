@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * 二分查找法
+ * 公式为: (left + right) / 2
  * Created by xfb on 2020/07/13 22:47.
  */
 public class BinarySearch {
