@@ -16,8 +16,10 @@ public class BinarySearch {
         int[] arr = {1, 8, 10, 89, 1000, 1000, 1000, 1234};
         //int i = binarySearch(arr, 0, arr.length - 1, 80);
         //System.out.println(i);
-        ArrayList<Integer> integers = binarySearch2(arr, 0, arr.length - 1, 1000);
-        System.out.println(integers.toString());
+        //ArrayList<Integer> integers = binarySearch2(arr, 0, arr.length - 1, 1000);
+        //System.out.println(integers.toString());
+        int i = binarySearchNoRecur(arr, 1234);
+        System.out.println(i);
     }
 
     /**
@@ -82,5 +84,26 @@ public class BinarySearch {
             }
             return list;
         }
+    }
+
+    /**
+     * 非递归的二分查找
+     *
+     * @return
+     */
+    public int binarySearchNoRecur(int[] nums, int findVal) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] == findVal) {
+                return mid;
+            } else if (findVal < nums[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
     }
 }
