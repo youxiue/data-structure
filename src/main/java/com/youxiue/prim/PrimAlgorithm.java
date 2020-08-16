@@ -8,6 +8,7 @@ import java.util.Arrays;
  * Created by xfb on 2020/08/13 21:51.
  * <p>
  * 普利姆算法
+ * 找到 链接所有村庄, 路的总长度最小的路径
  */
 public class PrimAlgorithm {
 
