@@ -3,6 +3,7 @@ package com.youxiue.search;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 二分查找法
@@ -17,6 +18,11 @@ public class BinarySearch {
         //int i = binarySearch(arr, 0, arr.length - 1, 80);
         //System.out.println(i);
         //ArrayList<Integer> integers = binarySearch2(arr, 0, arr.length - 1, 1000);
+
+        /*int erfen = erfen(arr, 0, arr.length - 1);
+        System.out.println(erfen);*/
+
+
         //System.out.println(integers.toString());
         int i = binarySearchNoRecur(arr, 1234);
         System.out.println(i);
@@ -86,6 +92,23 @@ public class BinarySearch {
         }
     }
 
+
+
+    public int erfen(int[]nums , int left, int right) {
+        if (left > right) {
+            return -1;
+        }
+        // 获取中间索引
+        int mid = (left + right) / 2;
+        int leftMagic = erfen(nums, left, mid - 1);
+        if (leftMagic != -1) {
+            return leftMagic;
+        } else if (nums[mid] == mid) {
+            return mid;
+        }
+        return erfen(nums, mid + 1, right);
+
+    }
     /**
      * 非递归的二分查找
      *
