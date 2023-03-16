@@ -1,16 +1,15 @@
 package com.youxiue.sort;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
 /**
- * Created by xfb on 2020/07/04 23:17.
  * 希尔排序
  * 间隔大的时候, 移动次数少
  * 间隔小的时候, 移动距离短
  * 800000个数字排序时间为 1s不到
+ * Created by xfb on 2020/07/04 23:17.
  */
 public class ShellSort {
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class ShellSort {
         int[] arr = new int[800000];
         for (int i = 0; i < 800000; i++) {
             //生成 [0 8000000)的数
-            arr[i] = (int)(Math.random() * 8000000);
+            arr[i] = (int) (Math.random() * 8000000);
         }
         SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.printf("开始时间:%s \n", simple.format(new Date()));
@@ -75,6 +74,7 @@ public class ShellSort {
 
     /**
      * 希尔排序  交换方式是选择排序(慢)
+     *
      * @param arr
      */
     public static void shellSelectSort(int[] arr) {
@@ -99,6 +99,7 @@ public class ShellSort {
 
     /**
      * 希尔排序, 交换方式是 插入排序 (快)
+     *
      * @param arr
      */
     public static void shellInsertSort(int[] arr) {

@@ -48,9 +48,9 @@ public class Graph {
         }
     }
 
-    public void bfs(){
+    public void bfs() {
         for (int i = 0; i < vertexList.size(); i++) {
-            if(!isVisit[i]){
+            if (!isVisit[i]) {
                 bfs(isVisit, i);
             }
         }
@@ -75,14 +75,14 @@ public class Graph {
         // 先查找当前节点的第一个连接点
 
         // 如果队列中有值
-        while(list.size()> 0){
+        while (list.size() > 0) {
             // 获取队列中的第一个值  将取到的值 弹出
             u = list.removeFirst();
             w = getFirstNode(u);
             while (w != -1) {
                 // 如果找到连接点了
                 // 判断链接点是否访问过
-                if(!isVisit[w]){
+                if (!isVisit[w]) {
                     // 如果没有访问过
                     // 输出当前节点
                     System.out.println(getVertexByIndex(w) + "=>");
@@ -95,8 +95,6 @@ public class Graph {
                 w = getNextNode(u, w);
             }
         }
-
-
 
 
     }

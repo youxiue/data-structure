@@ -21,14 +21,14 @@ public class CheckUserInterceptor extends AbstractPhaseInterceptor<SoapMessage> 
     @Override
     public void handleMessage(SoapMessage soapMessage) throws Fault {
         Header header = soapMessage.getHeader(new QName("youxiue"));
-        if(header!=null){
+        if (header != null) {
             Element element = (Element) header.getObject();
             String name = element.getElementsByTagName("name").item(0).getTextContent();
             String password = element.getElementsByTagName("password").item(0).getTextContent();
-            if("xfb".equals(name)&& "123456".equals(password)){
+            if ("xfb".equals(name) && "123456".equals(password)) {
                 System.out.println("通过拦截器");
-            }else{
-                System.out.printf("用户名:%s, 密码:%s",name,password);
+            } else {
+                System.out.printf("用户名:%s, 密码:%s", name, password);
                 throw new RuntimeException("用户名或密码错误");
             }
         }

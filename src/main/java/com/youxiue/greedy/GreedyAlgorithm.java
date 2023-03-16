@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 /**
  * Created by xfb on 2020/08/11 22:28.
@@ -91,7 +90,7 @@ public class GreedyAlgorithm {
                 }
             }
             // 如果找到了
-            if(maxKey != null){
+            if (maxKey != null) {
                 // 将选中的电台加入到 selects 中
                 selects.add(maxKey);
                 // 将选中电台的覆盖地区从 所有地区中移除, 方便 下次选出 覆盖剩余地区最多的

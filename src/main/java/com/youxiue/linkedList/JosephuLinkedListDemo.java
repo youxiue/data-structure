@@ -8,7 +8,7 @@ public class JosephuLinkedListDemo {
         CircleSingleLinkedList linkedList = new CircleSingleLinkedList();
 //        com.youxiue.linkedList.add(1);
 //        com.youxiue.linkedList.list();
-        linkedList.cq(1,10,3);
+        linkedList.cq(1, 10, 3);
     }
 }
 
@@ -30,7 +30,7 @@ class CircleSingleLinkedList {
                 first = new Boy(1);
                 first.setNext(first);
                 curBoy = first;
-            }else{
+            } else {
                 Boy boy = new Boy(i);
                 curBoy.setNext(boy);
                 boy.setNext(first);
@@ -44,7 +44,7 @@ class CircleSingleLinkedList {
         Boy curBoy = first;
         while (true) {
             System.out.printf("节点编号：%d", curBoy.getNo());
-            if(curBoy.getNext() == first){
+            if (curBoy.getNext() == first) {
                 break;
             }
             curBoy = curBoy.getNext();
@@ -54,12 +54,13 @@ class CircleSingleLinkedList {
 
     /**
      * josepho 问题，小孩出圈
+     *
      * @param startNo 起始报数编号
-     * @param nums  小孩数量
-     * @param m 每次报数几个
+     * @param nums    小孩数量
+     * @param m       每次报数几个
      */
-    public void cq(int startNo,int nums,int m){
-        if(startNo < 1 ||  startNo> nums || m<1){
+    public void cq(int startNo, int nums, int m) {
+        if (startNo < 1 || startNo > nums || m < 1) {
             System.out.println("参数有误！");
             return;
         }
@@ -88,7 +89,7 @@ class CircleSingleLinkedList {
             helper.setNext(first);
         }
 
-        System.out.println("剩下的最后一个小屁孩："+ first.getNo());
+        System.out.println("剩下的最后一个小屁孩：" + first.getNo());
     }
 }
 

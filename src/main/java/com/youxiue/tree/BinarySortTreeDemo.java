@@ -43,11 +43,11 @@ public class BinarySortTreeDemo {
 class BinarySortTree {
     Node root;
 
-    public void printRoot(){
+    public void printRoot() {
         if (root == null) {
             System.out.println("root为空");
         } else {
-            System.out.println("root: "+root.value);
+            System.out.println("root: " + root.value);
         }
     }
 

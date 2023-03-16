@@ -22,7 +22,7 @@ public class PublishService {
          */
         Endpoint endpoint = Endpoint.publish("http://localhost:8989/userDao", new UserDao());
 
-        EndpointImpl endpointImpl = (EndpointImpl)endpoint;
+        EndpointImpl endpointImpl = (EndpointImpl) endpoint;
         // 服务端的日志入拦截器
         List<Interceptor<? extends Message>> inInterceptors = endpointImpl.getInInterceptors();
         inInterceptors.add(new LoggingInInterceptor());

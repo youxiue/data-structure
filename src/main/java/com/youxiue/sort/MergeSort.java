@@ -104,7 +104,7 @@ public class MergeSort {
         // 原版代码的迭代次数少了一次，没有考虑到奇数列数组的情况
         for (block = 1; block < len * 2; block *= 2) { // 这个是划定每组的数量  , 每次都是两倍的增长
             for (start = 0; start < len; start += 2 * block) { // 起始位置.  每次都是 从0 开始, 两倍于每组的数量 往右移
-                System.out.println("block: "+block+" | start: "+start);
+                System.out.println("block: " + block + " | start: " + start);
                 int low = start;
                 int mid = (start + block) < len ? (start + block) : len;
                 int high = (start + 2 * block) < len ? (start + 2 * block) : len;

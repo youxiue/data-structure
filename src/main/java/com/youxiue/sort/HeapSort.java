@@ -3,16 +3,17 @@ package com.youxiue.sort;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 /**
  * Created by xfb on 2020/07/26 21:51.
  * 堆排序
  * 800000 105ms
- *
+ * <p>
  * 大顶堆: 每个节点的值都大于或等于其左右子节点的值, 称为大顶堆,  左右子节点之间无所谓大小关系.
  * 小顶堆: 每个节点的值都小于或等于其左右子节点的值.
+ *
+ * 适用场景: 选出前几名, 不是全部排序的时候
  */
 public class HeapSort {
 

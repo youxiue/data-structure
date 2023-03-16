@@ -1,13 +1,12 @@
 package com.youxiue.tree;
 
-import jdk.nashorn.internal.ir.CallNode;
 import org.junit.Test;
 
 /**
  * 二叉树
  * Created by xfb on 2020/07/21 21:35.
  */
-public class  BinaryTreeDemo {
+public class BinaryTreeDemo {
 
     @Test
     public void test() {
@@ -62,9 +61,9 @@ public class  BinaryTreeDemo {
         System.out.println("后序查找");
         Hero hero = binaryTree.postOrderSearch(4);//  2
 
-        if(hero!=null){
+        if (hero != null) {
             System.out.println(hero);
-        }else {
+        } else {
             System.out.println("没有");
         }
     }
@@ -158,14 +157,14 @@ class BinaryTree {
     }
 
     // 删除节点
-    public void delNo(int no){
-        if(this.root != null){
-            if(this.root.no == no){
+    public void delNo(int no) {
+        if (this.root != null) {
+            if (this.root.no == no) {
                 this.root = null;
-            }else{
+            } else {
                 this.root.delNode(no, false);
             }
-        }else {
+        } else {
             System.out.println("树是空树!");
         }
     }

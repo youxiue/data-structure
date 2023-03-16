@@ -12,7 +12,7 @@ public class FibonacciSearch {
 
     @Test
     public void test() {
-        int[] arr = {1, 8 ,10, 89, 100, 123, 500, 1234};
+        int[] arr = {1, 8, 10, 89, 100, 123, 500, 1234};
         int index = fibonacciSearch(arr, 1234);
         System.out.println(index);
     }

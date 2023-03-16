@@ -2,7 +2,6 @@ package com.youxiue.kruskal;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -19,14 +18,14 @@ public class KruskalCase {
         // 1. 构建 图形
         char[] vertexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int[][] matrix = {
-              // A      B       C       D       E       F       G
-                {0,     12,     MAX,    MAX,    MAX,    16,     14},    // A
-                {12,    0,      10,     MAX,    MAX,    7,      MAX},   // B
-                {MAX,   10,     0,      3,      5,      6,      MAX},   // C
-                {MAX,   MAX,    3,      0,      4,      MAX,    MAX},   // D
-                {MAX,   MAX,    5,      4,      0,      2,      8},     // E
-                {16,    7,      6,      MAX,    2,      0,      9},     // F
-                {14,    MAX,    MAX,    MAX,    8,      9,      0}      // G
+                // A      B       C       D       E       F       G
+                {0, 12, MAX, MAX, MAX, 16, 14},    // A
+                {12, 0, 10, MAX, MAX, 7, MAX},   // B
+                {MAX, 10, 0, 3, 5, 6, MAX},   // C
+                {MAX, MAX, 3, 0, 4, MAX, MAX},   // D
+                {MAX, MAX, 5, 4, 0, 2, 8},     // E
+                {16, 7, 6, MAX, 2, 0, 9},     // F
+                {14, MAX, MAX, MAX, 8, 9, 0}      // G
         };
         Kruskal kruskal = new Kruskal(vertexs, matrix);
         kruskal.print();
@@ -44,7 +43,7 @@ public class KruskalCase {
 
         // 4. 选取最短的边, 并且与其他选中的边 不构成回路.
         // 记录选中的边
-        EData[] selectEData = new EData[length-1];
+        EData[] selectEData = new EData[length - 1];
         // 记录 终点的集合
         int[] ends = new int[length];
         int index = 0;
@@ -70,12 +69,12 @@ public class KruskalCase {
     }
 
     // 生成边的方法
-    public EData[] getEdges(Kruskal kruskal){
+    public EData[] getEdges(Kruskal kruskal) {
         EData[] edges = new EData[kruskal.edgeNum];
         int index = 0;
         for (int i = 0; i < kruskal.matrix.length; i++) {
-            for (int j = i+1; j < kruskal.matrix.length; j++) {
-                if(kruskal.matrix[i][j] != MAX){
+            for (int j = i + 1; j < kruskal.matrix.length; j++) {
+                if (kruskal.matrix[i][j] != MAX) {
                     EData eData = new EData(kruskal.vertexs[i], kruskal.vertexs[j], kruskal.matrix[i][j]);
                     edges[index++] = eData;
                 }
@@ -85,16 +84,16 @@ public class KruskalCase {
     }
 
     //打印边的方法
-    public void printEdges( EData[] edges ){
+    public void printEdges(EData[] edges) {
         for (EData edge : edges) {
             System.out.println(edge);
         }
     }
 
     // 获取顶点的索引
-    public int getPosition(char[] vertexs, char a){
+    public int getPosition(char[] vertexs, char a) {
         for (int i = 0; i < vertexs.length; i++) {
-            if(vertexs[i] == a){
+            if (vertexs[i] == a) {
                 return i;
             }
         }
@@ -103,11 +102,12 @@ public class KruskalCase {
 
     /**
      * 获取一个顶点的 终点的 索引
+     *
      * @param ends 索引是 一条边的起始点,  值是一条边对应的终点,
-     * @param i  要查找终点的起始点
+     * @param i    要查找终点的起始点
      */
-    public int getEnd(int[] ends, int i){
-        while(ends[i] != 0){
+    public int getEnd(int[] ends, int i) {
+        while (ends[i] != 0) {
             i = ends[i];
         }
         return i;

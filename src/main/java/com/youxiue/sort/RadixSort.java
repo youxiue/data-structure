@@ -1,7 +1,6 @@
 package com.youxiue.sort;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -58,7 +57,7 @@ public class RadixSort {
             // 将桶中的数据拿出来. 重新放入到arr中
             int y = 0;
             for (int k = 0; k < bucket.length; k++) {
-                if(bucketLength[k] != 0){
+                if (bucketLength[k] != 0) {
                     for (int x = 0; x < bucketLength[k]; x++) {
                         arr[y] = bucket[k][x];
                         y++;

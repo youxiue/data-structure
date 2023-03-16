@@ -3,7 +3,6 @@ package com.youxiue.tree;
 import lombok.Data;
 import org.junit.Test;
 
-import javax.xml.soap.Node;
 import java.io.*;
 import java.util.*;
 
@@ -277,7 +276,7 @@ public class HuffmanCodingDemo {
         //StringBuffer sb = new StringBuffer(); // 1292296
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < hfCoding.length; i++) {
-            if (i < hfCoding.length-1 ) {
+            if (i < hfCoding.length - 1) {
                 sb.append(toBinaryString(true, hfCoding[i]));
             } else {
                 sb.append(toBinaryString(false, hfCoding[i]));
@@ -329,7 +328,7 @@ public class HuffmanCodingDemo {
         if (flag) {
             str = str.substring(str.length() - 8);
         }
-        System.out.println("---"+str);
+        System.out.println("---" + str);
         return str;
     }
 

@@ -106,7 +106,7 @@ public class HorseChessboard {
         return list;
     }
 
-    public void sort(ArrayList<Point> ps){
+    public void sort(ArrayList<Point> ps) {
         ps.sort(new Comparator<Point>() {
             @Override
             public int compare(Point o1, Point o2) {

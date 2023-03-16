@@ -3,7 +3,6 @@ package com.youxiue.search;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * 二分查找法
@@ -93,8 +92,7 @@ public class BinarySearch {
     }
 
 
-
-    public int erfen(int[]nums , int left, int right) {
+    public int erfen(int[] nums, int left, int right) {
         if (left > right) {
             return -1;
         }
@@ -109,6 +107,7 @@ public class BinarySearch {
         return erfen(nums, mid + 1, right);
 
     }
+
     /**
      * 非递归的二分查找
      *

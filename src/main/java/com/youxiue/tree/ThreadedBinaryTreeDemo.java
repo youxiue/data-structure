@@ -118,21 +118,21 @@ class ThreadedBinaryTree {
 
         while (node != null) {
             // 如果右边是 后继节点
-            if(node.getRightType() == 1){
+            if (node.getRightType() == 1) {
                 System.out.println(node);
                 pre = node;
                 node = node.getRight();
-            }else {
+            } else {
                 // 如果右边不是后继节点
                 // 判断右边是否 是前驱节点,  如果是的话 则回到父节点
-                if(node.getRight() == pre){
+                if (node.getRight() == pre) {
                     System.out.println(node);
-                    if(node == root){ // 如果回到了 root 节点 则退出
+                    if (node == root) { // 如果回到了 root 节点 则退出
                         return;
                     }
                     pre = node;
                     node = node.getParent();
-                }else{
+                } else {
                     // 如果右边也不是前驱节点
                     node = node.getRight();
                     // 那么就说明没有被遍历过 则查找该节点右子节点下面的最左边的子节点

@@ -36,19 +36,24 @@
 
     相反,如果值相同的前后顺序发生了变化, 则是不稳定的.
     
-##列表
-- com.youxiue.linkedList: 链表
+##目录
+- linkedList: 链表
     - DoubleLinkedList: 双向链表
     - JosephuLinkedList: 环形链表
-- com.youxiue.stack: 栈
+- stack: 栈
     - ArrayStackDemo: 手动实现栈
     - Calculator: 计算中缀表达式
     - PolandNotation: 逆波兰计算器(计算后缀表达式)
-- com.youxiue.recursion: 递归
+- recursion: 递归
     - MiGong: 迷宫寻路问题
     - Queue8: 8皇后问题
-- com.youxiue.sort:排序
+- sort:排序
     - Bubbling: 冒泡排序
     - InsertSort: 插入排序
     - SelectSort: 选择排序
+    - HeapSort: 堆排序
+    - MergeSort: 归并排序
+    - QuickSort: 快速排序
+    - RadixSort: 基数排序
+    - ShellSort: 希尔排序
 

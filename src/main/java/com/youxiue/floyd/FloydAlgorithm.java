@@ -68,7 +68,7 @@ class Graph {
 
         for (int i = 0; i < dis.length; i++) {
             for (int j = 0; j < dis[i].length; j++) {
-                System.out.print(vertexs[pre[i][j]]+ "   ");
+                System.out.print(vertexs[pre[i][j]] + "   ");
             }
             System.out.println();
             for (int j = 0; j < dis[i].length; j++) {

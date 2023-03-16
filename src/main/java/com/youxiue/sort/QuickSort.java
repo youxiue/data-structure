@@ -1,7 +1,6 @@
 package com.youxiue.sort;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -17,7 +16,7 @@ public class QuickSort {
         int[] arr = new int[800000];
         for (int i = 0; i < 800000; i++) {
             //生成 [0 8000000)的数
-            arr[i] = (int)(Math.random() * 8000000);
+            arr[i] = (int) (Math.random() * 8000000);
         }
         SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.printf("开始时间:%s \n", simple.format(new Date()));
@@ -69,7 +68,7 @@ public class QuickSort {
      * 韩顺平老师的版本
      */
     public static void quickSort3(int[] arr, int leftBound, int rightBound) {
-        int pivot = arr[(leftBound+rightBound)/2]; // 以最右边的值为中心值
+        int pivot = arr[(leftBound + rightBound) / 2]; // 以最右边的值为中心值
         int left = leftBound;
         int right = rightBound;
 

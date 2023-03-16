@@ -17,42 +17,42 @@ public class Queue8 {
 
 
     @Test
-    public void main(){
+    public void main() {
         check(0);
-        System.out.printf("一共%d种解法",count);
+        System.out.printf("一共%d种解法", count);
     }
 
-    public void check(int n){
-        if( n == max ){
+    public void check(int n) {
+        if (n == max) {
             // 如果n == 8 表明 已经找到一种解法
             print();
-            count ++;
+            count++;
             return;
-        }else {
+        } else {
 
             for (int i = 0; i < max; i++) {
                 array[n] = i;
-                if(judge(n)){
+                if (judge(n)) {
                     // 如果当前位置不冲突 , 则 摆放下一行
-                    check(n+1);
+                    check(n + 1);
                 }
             }
         }
     }
 
     // 将皇后摆放的位置 打印出来
-    public void print(){
+    public void print() {
         for (int i : array) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
         System.out.println();
     }
 
     // 校验当前摆放位置 是否 冲突
-    public boolean judge(int n){
+    public boolean judge(int n) {
         for (int i = 0; i < n; i++) {
             // 校验当前摆放位置 是否与 之前的位置 在同一列 或者在斜线上
-            if(array[i] == array[n] || Math.abs(n-i) == Math.abs(array[n]-array[i])){
+            if (array[i] == array[n] || Math.abs(n - i) == Math.abs(array[n] - array[i])) {
                 return false;
             }
         }

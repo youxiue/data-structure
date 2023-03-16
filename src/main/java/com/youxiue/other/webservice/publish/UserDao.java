@@ -8,10 +8,11 @@ import javax.jws.WebService;
 @WebService
 public class UserDao {
 
-    public void add(){
+    public void add() {
         System.out.println("add");
     }
-    public void update(){
+
+    public void update() {
         System.out.println("update");
     }
 
@@ -19,11 +20,11 @@ public class UserDao {
      * webMethod -> exclude=true 为不发布该接口
      */
     @WebMethod(exclude = true)
-    public void sayHello(){
+    public void sayHello() {
         System.out.println("hello");
     }
 
-    public User getUserById(int id){
+    public User getUserById(int id) {
         User user = new User();
         user.setId(id);
         user.setName("香辣兰花豆");

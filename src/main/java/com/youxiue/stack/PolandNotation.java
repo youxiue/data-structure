@@ -60,9 +60,9 @@ public class PolandNotation {
 
                 if (s1.isEmpty() || s1.peek().equals("(")) {
                     s1.push(s);
-                } else{
+                } else {
                     // 2. 否则 取出s1 栈顶的运算符 压入到s2 , 然后再取出s1 的栈顶运算符进行比较
-                    while (!s1.isEmpty() && getPriority(s)<=getPriority(s1.peek())){
+                    while (!s1.isEmpty() && getPriority(s) <= getPriority(s1.peek())) {
                         s2.add(s1.pop());
                     }
                     s1.push(s);
@@ -71,7 +71,7 @@ public class PolandNotation {
         }
 
         // 最后将s1中的运算符以此取出 压入到s2
-        while (!s1.isEmpty()){
+        while (!s1.isEmpty()) {
             s2.add(s1.pop());
         }
         return s2;

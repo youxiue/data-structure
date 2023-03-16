@@ -47,7 +47,7 @@ public class Bubbling {
                     flag = true;
                 }
             }
-            System.out.printf("第%d趟排序:",i);
+            System.out.printf("第%d趟排序:", i);
             System.out.println(list.toString());
             // 优化 如果没有发生交换 ,说明顺序已经是 从小到大的顺序了
             if (!flag) {
@@ -60,8 +60,6 @@ public class Bubbling {
     }
 
 
-
-
     public void bubblingSort2(List<Integer> list) {
         int temp = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -72,7 +70,7 @@ public class Bubbling {
                     list.set(j, temp);
                 }
             }
-            System.out.printf("第%d趟排序:",i);
+            System.out.printf("第%d趟排序:", i);
             System.out.println(list.toString());
         }
     }

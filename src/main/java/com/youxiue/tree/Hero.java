@@ -1,7 +1,6 @@
 package com.youxiue.tree;
 
 import lombok.Data;
-import lombok.ToString;
 
 /**
  * Created by xfb on 2020/07/21 21:36.
@@ -75,7 +74,7 @@ public class Hero {
      * 前序查找
      */
     public Hero preOrderSearch(int no) {
-        System.out.println("前序查找"+this.no);
+        System.out.println("前序查找" + this.no);
         if (this.no == no) {
             return this;
         }
@@ -105,7 +104,7 @@ public class Hero {
         if (hero != null) {
             return hero;
         }
-        System.out.println("中序查找"+this.no);
+        System.out.println("中序查找" + this.no);
         if (this.no == no) {
             return this;
         }
@@ -133,7 +132,7 @@ public class Hero {
         if (hero != null) {
             return hero;
         }
-        System.out.println("后序查找"+this.no);
+        System.out.println("后序查找" + this.no);
         if (this.no == no) {
             return this;
         }
@@ -143,26 +142,26 @@ public class Hero {
     /**
      * 查找删除
      */
-    public void delNode(int no, boolean flag){
+    public void delNode(int no, boolean flag) {
         // 1. 先判断 左子节点是否为空, 如果不为空, 则判断是否为 目标节点
-        if(this.left != null && this.left.no == no){
+        if (this.left != null && this.left.no == no) {
             this.left = null;
             flag = true;
             return;
         }
         // 2. 再判断 右子节点是否为空, 如果不为空, 则判断是否为 目标节点
-        if(this.right != null && this.right.no == no){
+        if (this.right != null && this.right.no == no) {
             this.right = null;
             flag = true;
             return;
         }
         // 3. 如果左右子节点都不是要找的,  则从左子节点往下遍历 查找
-        if(this.left != null && !flag){
+        if (this.left != null && !flag) {
             this.left.delNode(no, flag);
         }
 
         // 4.如果没有找到 , 则从右子节点往下遍历 查找
-        if(this.right != null && flag){
+        if (this.right != null && flag) {
             this.right.delNode(no, flag);
         }
 

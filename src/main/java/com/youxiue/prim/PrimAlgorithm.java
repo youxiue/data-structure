@@ -64,7 +64,7 @@ public class PrimAlgorithm {
                     }
                 }
             }
-            System.out.println("<" + graph.data[h1] + ", " + graph.data[h2] + ">"+ "  weight:"+ graph.weight[h1][h2]);
+            System.out.println("<" + graph.data[h1] + ", " + graph.data[h2] + ">" + "  weight:" + graph.weight[h1][h2]);
             // 将 j 节点标记为 已经标记过
             visited[h2] = 1;
         }

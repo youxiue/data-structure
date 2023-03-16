@@ -13,7 +13,7 @@ import org.junit.Test;
 public class ArrBinaryTreeDemo {
 
     @Test
-    public void test(){
+    public void test() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
         ArrBinaryTree arrBinaryTree = new ArrBinaryTree(arr);
         arrBinaryTree.preOrder(0);

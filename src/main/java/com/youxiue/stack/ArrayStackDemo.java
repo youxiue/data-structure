@@ -11,14 +11,14 @@ public class ArrayStackDemo {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
         String key = "";
-        while (loop){
+        while (loop) {
             System.out.println("s:表示显示栈");
             System.out.println("e:退出");
             System.out.println("p:添加数据到栈");
             System.out.println("t:从栈取出数据");
             System.out.println("请输入你的选择：");
             key = scanner.next();
-            switch (key){
+            switch (key) {
                 case "s":
                     arrayStack.list();
                     break;
@@ -32,7 +32,7 @@ public class ArrayStackDemo {
                     break;
                 case "t":
                     try {
-                        System.out.println("出栈数据是："+arrayStack.pop());
+                        System.out.println("出栈数据是：" + arrayStack.pop());
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -65,8 +65,8 @@ class ArrayStack {
     }
 
     // 入栈
-    public void push(int value){
-        if(isFull()){
+    public void push(int value) {
+        if (isFull()) {
             System.out.println("栈满");
             return;
         }
@@ -75,24 +75,24 @@ class ArrayStack {
     }
 
     // 出栈
-    public int pop(){
-        if(isEmpty()){
+    public int pop() {
+        if (isEmpty()) {
             throw new RuntimeException("栈为空");
         }
-        int value =stack[top];
+        int value = stack[top];
         top--;
         return value;
     }
 
     // 遍历
-    public void list(){
-        if(isEmpty()){
+    public void list() {
+        if (isEmpty()) {
             System.out.println("栈空");
             return;
         }
         //从栈顶开始遍历
         for (int i = top; i >= 0; i--) {
-            System.out.printf("com.youxiue.stack[%d]=%d\n",i,stack[i]);
+            System.out.printf("com.youxiue.stack[%d]=%d\n", i, stack[i]);
         }
     }
 

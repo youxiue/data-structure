@@ -49,16 +49,17 @@ public class DoubleLinkedListDemo {
 }
 
 // 创建一个双向链表类
-class DoubleLinkedList{
+class DoubleLinkedList {
     // 初始化一个头节点
-    private HeroNode2 head = new HeroNode2(0,"","");
+    private HeroNode2 head = new HeroNode2(0, "", "");
 
     // 返回头节点
-    public HeroNode2 getHead(){
+    public HeroNode2 getHead() {
         return head;
     }
+
     // 添加  插到末尾
-    public void add(HeroNode2 heroNode){
+    public void add(HeroNode2 heroNode) {
 
         // 定义一个指针
         HeroNode2 temp = head;
@@ -72,26 +73,26 @@ class DoubleLinkedList{
     }
 
     // 按照编号大小 顺序添加
-    public void orderAdd(HeroNode2 heroNode){
+    public void orderAdd(HeroNode2 heroNode) {
         HeroNode2 temp = head;
         // 获取到末尾节点
         while (temp.next != null) {
             // 如果下一个节点的编号大于要插入的节点的编号了  则推出
-            if(temp.next.no > heroNode.no){
+            if (temp.next.no > heroNode.no) {
                 break;
             }
             temp = temp.next;
         }
         // 插入节点
-        if(temp.next != null){
+        if (temp.next != null) {
             // 建立 temp.next和 heroNode的关系
             heroNode.next = temp.next;
             temp.next.pre = heroNode;
             // 建立 heroNode 和 temp 的关系
             heroNode.pre = temp;
-            temp.next= heroNode;
+            temp.next = heroNode;
 
-        }else{
+        } else {
             temp.next = heroNode;
             heroNode.pre = temp;
         }
@@ -99,8 +100,8 @@ class DoubleLinkedList{
     }
 
     //根据编号修改节点
-    public void update(HeroNode2 heroNode){
-        if(head.next == null){
+    public void update(HeroNode2 heroNode) {
+        if (head.next == null) {
             System.out.println("链表为空！");
             return;
         }
@@ -109,24 +110,24 @@ class DoubleLinkedList{
         boolean flag = false;
 
         while (temp != null) {
-            if(temp.no==heroNode.no){
+            if (temp.no == heroNode.no) {
                 flag = true;
                 break;
             }
             temp = temp.next;
         }
 
-        if(flag){
+        if (flag) {
             temp.name = heroNode.name;
             temp.nickname = heroNode.nickname;
-        }else{
-            System.out.printf("没有找到 编号%d 的英雄",heroNode.no);
+        } else {
+            System.out.printf("没有找到 编号%d 的英雄", heroNode.no);
         }
     }
 
     // 删除 节点
-    public void delete(int no){
-        if(head.next == null){
+    public void delete(int no) {
+        if (head.next == null) {
             System.out.println("链表为空！");
             return;
         }
@@ -135,7 +136,7 @@ class DoubleLinkedList{
         boolean flag = false;
 
         while (temp != null) {
-            if(temp.no==no){
+            if (temp.no == no) {
                 flag = true;
                 break;
             }
@@ -143,22 +144,22 @@ class DoubleLinkedList{
         }
 
         // 删除该节点
-        if(flag){
+        if (flag) {
             temp.pre.next = temp.next;
             // 如果temp 不是最后一个节点
-            if(temp.next!=null){
+            if (temp.next != null) {
                 temp.next.pre = temp.pre;
             }
 
-        }else{
-            System.out.printf("没有找到 编号%d 的节点",no);
+        } else {
+            System.out.printf("没有找到 编号%d 的节点", no);
         }
 
     }
 
     // 遍历双向链表 打印输出
-    public void list(){
-        if(head.next == null){
+    public void list() {
+        if (head.next == null) {
             System.out.println("链表为空！");
             return;
         }

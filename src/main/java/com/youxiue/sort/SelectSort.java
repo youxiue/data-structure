@@ -44,9 +44,9 @@ public class SelectSort {
                     minIndex = j;
                 }
             }
-            if(minIndex!=i){
-                list.set(minIndex,list.get(i));
-                list.set(i,min);
+            if (minIndex != i) {
+                list.set(minIndex, list.get(i));
+                list.set(i, min);
             }
         }
     }
